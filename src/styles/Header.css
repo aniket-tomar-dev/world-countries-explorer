@@ -1,0 +1,26 @@
+.header-container {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--elements-color);
+  padding: 20px 40px;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-changer {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.theme-changer:hover {
+  transform: scale(1.05);
+}

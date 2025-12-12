@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../styles/countryCard.css";
 
 export default function CountryCard({
   name,
@@ -8,7 +10,7 @@ export default function CountryCard({
   capital,
 }) {
   return (
-    <a className="country-card" href={`/country.html?name=${name}`}>
+    <Link className="country-card" to={`/country/${name}`}>
       <img src={flag} alt={name + "Flag"} />
       <div className="card-text">
         <h3 className="card-title">{name}</h3>
@@ -25,6 +27,6 @@ export default function CountryCard({
           {capital}
         </p>
       </div>
-    </a>
+    </Link>
   );
 }

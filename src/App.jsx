@@ -1,25 +1,17 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import SearchBar from "./components/SearchBar";
-import SelectMenu from "./components/SelectMenu";
-import CountriesList from "./components/CountriesList";
-
+import Home from "./pages/Home";
+import CountryDetails from "./pages/CountryDetails";
 import "./App.css";
 
-const App = () => {
-  const [query, setQuery] = useState("");
+export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <main>
-        <div className="search-filter-container">
-          <SearchBar setQuery={setQuery} />
-          <SelectMenu />
-        </div>
-        <CountriesList query={query} />
-      </main>
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/country/:name" element={<CountryDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}
