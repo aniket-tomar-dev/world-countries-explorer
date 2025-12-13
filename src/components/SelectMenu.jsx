@@ -1,8 +1,11 @@
 import React from "react";
 
-export default function SelectMenu() {
+export default function SelectMenu({ setRegion }) {
   return (
-    <select className="filter-by-region">
+    <select
+      className="filter-by-region"
+      onChange={(e) => setRegion(e.target.value)}
+    >
       <option hidden="">Filter by Region</option>
       <option value="Africa">Africa</option>
       <option value="America">America</option>

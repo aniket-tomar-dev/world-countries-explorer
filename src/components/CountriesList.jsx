@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import countriesData from "../../countryData";
 import CountryCard from "./CountryCard";
 
-export default function CountriesList({ query }) {
+export default function CountriesList({ query, region }) {
   return (
     <>
       <div className="countries-container">
@@ -10,6 +10,7 @@ export default function CountriesList({ query }) {
           .filter((country) =>
             country.name.common.toLowerCase().includes(query)
           )
+          .filter((country) => (region ? country.region === region : true))
           .map((country) => {
             return (
               <CountryCard

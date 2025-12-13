@@ -1,4 +1,5 @@
 import "../styles/Header.css";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const toggleTheme = () => {
@@ -8,8 +9,10 @@ export default function Header() {
   return (
     <header className="header-container">
       <div className="header-content">
-        <h2 className="title">
-          <a href="/">Where in the world?</a>
+        <h2>
+          <Link to="/" className="title">
+            Where in the world?
+          </Link>
         </h2>
         <p className="theme-changer" onClick={toggleTheme}>
           <i className="fa-regular fa-moon" /> Dark Mode
