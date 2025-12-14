@@ -17,7 +17,7 @@
 }
 
 .country-card:hover {
-  transform: translateY(-5px) scale(1.03);
+  /* transform: translateY(-5px) scale(1.03); */
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
@@ -28,9 +28,9 @@
   transition: all 0.4s ease;
 }
 
-.country-card:hover img {
+/* .country-card:hover img {
   transform: scale(1.05);
-}
+} */
 
 .card-text {
   padding: 16px;
@@ -42,4 +42,8 @@
   font-size: 20px;
   margin-bottom: 12px;
   font-weight: 700;
+}
+
+.country-card.selected {
+  outline: 3px solid #4f46e5;
 }
