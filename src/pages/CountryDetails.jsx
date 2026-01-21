@@ -5,7 +5,7 @@ import "../styles/CountryDetails.css";
 export default function CountryDetails() {
   const { name } = useParams();
   const country = countriesData.find(
-    (c) => c.name.common.toLowerCase() === name.toLowerCase()
+    (c) => c.name.common.toLowerCase() === name.toLowerCase(),
   );
 
   if (!country) return <h2>Country not found</h2>;
