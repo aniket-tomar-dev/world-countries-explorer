@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import countriesData from "../../countryData";
-import "../styles/CountryDetails.css";
+import "../styles/countryDetails.css";
 
 export default function CountryDetails() {
   const { name } = useParams();
